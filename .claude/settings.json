@@ -1,0 +1,6 @@
+{
+  "model": "opusplan",
+  "permissions": {
+    "allow": ["Bash(bun:*)", "Bash(bunx:*)", "WebSearch"]
+  }
+}

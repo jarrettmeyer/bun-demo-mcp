@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+
+# output
+dist/
+*.mcpb
+
+# environment variable files
+.env
+
+# operating system
+.DS_Store

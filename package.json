@@ -1,0 +1,23 @@
+{
+  "name": "magic-8-ball-mcp",
+  "version": "1.0.0",
+  "description": "A Magic 8-Ball MCP server demo",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --minify",
+    "inspect": "bunx @modelcontextprotocol/inspector bun run src/index.ts",
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
