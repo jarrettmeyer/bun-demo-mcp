@@ -1,6 +1,6 @@
 {
   "name": "magic-8-ball-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Magic 8-Ball MCP server demo",
   "module": "src/index.ts",
   "type": "module",

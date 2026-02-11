@@ -3,9 +3,8 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod/v4";
 import pkg from "../package.json";
 
-// The 20 classic Magic 8-Ball responses
-const RESPONSES = [
-  // Affirmative (10)
+// Magic 8-Ball responses
+const AFFIRMATIVE = [
   "It is certain.",
   "It is decidedly so.",
   "Without a doubt.",
@@ -16,19 +15,24 @@ const RESPONSES = [
   "Outlook good.",
   "Yes.",
   "Signs point to yes.",
-  // Non-committal (5)
+  "This is the way.",
+  "Make it so.",
+];
+const NON_COMMITTAL = [
   "Reply hazy, try again.",
   "Ask again later.",
   "Better not tell you now.",
   "Cannot predict now.",
   "Concentrate and ask again.",
-  // Negative (5)
+];
+const NEGATIVE = [
   "Don't count on it.",
   "My reply is no.",
   "My sources say no.",
   "Outlook not so good.",
   "Very doubtful.",
 ];
+const RESPONSES = [...AFFIRMATIVE, ...NON_COMMITTAL, ...NEGATIVE];
 
 const server = new McpServer({
   name: "magic-8-ball",
@@ -81,7 +85,7 @@ server.registerResource(
   "magic-8-ball://responses",
   {
     title: "Magic 8-Ball Responses",
-    description: "The complete list of 20 classic Magic 8-Ball responses.",
+    description: `The complete list of ${RESPONSES.length} Magic 8-Ball responses.`,
     mimeType: "application/json",
   },
   async (uri) => {
@@ -92,9 +96,9 @@ server.registerResource(
           mimeType: "application/json",
           text: JSON.stringify({
             total: RESPONSES.length,
-            affirmative: RESPONSES.slice(0, 10),
-            nonCommittal: RESPONSES.slice(10, 15),
-            negative: RESPONSES.slice(15, 20),
+            affirmative: AFFIRMATIVE,
+            nonCommittal: NON_COMMITTAL,
+            negative: NEGATIVE,
           }, null, 2),
         },
       ],

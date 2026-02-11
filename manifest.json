@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "magic-8-ball-mcp",
   "display_name": "Magic 8-Ball",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ask the Magic 8-Ball a yes/no question and receive a mystical answer.",
   "author": {
     "name": "Jarrett Meyer"
@@ -16,20 +16,6 @@
       "args": ["${__dirname}/dist/index.js"]
     }
   },
-  "tools": [
-    {
-      "name": "shake",
-      "description": "Ask a yes/no question and receive a mystical answer from the Magic 8-Ball."
-    }
-  ],
-  "prompts": [
-    {
-      "name": "ask-the-8-ball",
-      "description": "A prompt template for consulting the Magic 8-Ball oracle.",
-      "arguments": ["question"],
-      "text": "I need guidance from the Magic 8-Ball. Please use the \"shake\" tool to answer my question: \"${arguments.question}\""
-    }
-  ],
   "compatibility": {
     "platforms": ["darwin", "win32", "linux"]
   }
