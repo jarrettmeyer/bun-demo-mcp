@@ -2,37 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod/v4";
 import pkg from "../package.json";
-
-// Magic 8-Ball responses
-const AFFIRMATIVE = [
-  "It is certain.",
-  "It is decidedly so.",
-  "Without a doubt.",
-  "Yes definitely.",
-  "You may rely on it.",
-  "As I see it, yes.",
-  "Most likely.",
-  "Outlook good.",
-  "Yes.",
-  "Signs point to yes.",
-  "This is the way.",
-  "Make it so.",
-];
-const NON_COMMITTAL = [
-  "Reply hazy, try again.",
-  "Ask again later.",
-  "Better not tell you now.",
-  "Cannot predict now.",
-  "Concentrate and ask again.",
-];
-const NEGATIVE = [
-  "Don't count on it.",
-  "My reply is no.",
-  "My sources say no.",
-  "Outlook not so good.",
-  "Very doubtful.",
-];
-const RESPONSES = [...AFFIRMATIVE, ...NON_COMMITTAL, ...NEGATIVE];
+import { AFFIRMATIVE, NON_COMMITTAL, NEGATIVE, RESPONSES } from "./responses";
 
 const server = new McpServer({
   name: "magic-8-ball",

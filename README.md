@@ -81,15 +81,18 @@ Double-click the `.mcpb` file (or open it with Claude Desktop). Claude will show
 
 ```
 bun-demo-mcp/
-├── src/
-│   └── index.ts          # MCP server (tool + prompt + resource)
+├── .claude/
+│   └── CLAUDE.md         # Claude Code project instructions
 ├── dist/
 │   └── index.js          # Compiled bundle (generated)
+├── src/
+│   ├── index.ts          # MCP server (tool + prompt + resource)
+│   └── responses.ts
+├── bun.lock
 ├── manifest.json         # MCPB bundle manifest
 ├── package.json
-├── tsconfig.json
-└── .claude/
-    └── CLAUDE.md         # Claude Code project instructions
+├── README.md
+└── tsconfig.json
 ```
 
 ## License
