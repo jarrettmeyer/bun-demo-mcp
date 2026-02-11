@@ -8,7 +8,9 @@
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target node --minify",
     "inspect": "bunx @modelcontextprotocol/inspector bun run src/index.ts",
-    "start": "bun run src/index.ts"
+    "pack": "bunx @anthropic-ai/mcpb pack .",
+    "start": "bun run src/index.ts",
+    "validate": "bunx @anthropic-ai/mcpb validate manifest.json"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",
