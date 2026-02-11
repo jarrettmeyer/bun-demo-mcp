@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "magic-8-ball-mcp",
   "display_name": "Magic 8-Ball",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ask the Magic 8-Ball a yes/no question and receive a mystical answer.",
   "author": {
     "name": "Jarrett Meyer"
